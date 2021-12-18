@@ -1,21 +1,21 @@
+import React from 'react';
+import Login from './components/Login.js';
+import Auth from './components/Auth.js';
 import './App.css';
 import Write from "./components/Write";
 import Main from "./components/Main";
-
-import {
-  BrowserRouter as Router, 
-  Routes, 
-  Route, 
-  Link
-} from "react-router-dom";
+import { Link, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-  return (<Router>
-    <Routes>
-    <Route path="/" element={<Main/>}/>
-    <Route path="/write" element={<Write/>}/>
-  </Routes>
-  </Router>
+  return (
+    <div>
+      <Router>
+        <Route path="/" exact={true} component={Login} />
+        <Route path="/oauth/kakao/callback" component={Auth} />
+        <Route path="/" component={<Main />} />
+        <Route path="/write" component={<Write />} />
+      </Router>
+    </div>
   );
 }
 
