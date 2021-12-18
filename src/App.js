@@ -10,10 +10,10 @@ function App() {
   return (
     <div>
       <Router>
-        <Route path="/" exact={true} component={Login} />
+        <Route path="/login" exact={true} component={Login} />
         <Route path="/oauth/kakao/callback" component={Auth} />
-        <Route path="/" component={<Main />} />
-        <Route path="/write" component={<Write />} />
+        <Route path="/" component={Main} />
+        <Route path="/write" component={Write} />
       </Router>
     </div>
   );
