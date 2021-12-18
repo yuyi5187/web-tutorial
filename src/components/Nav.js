@@ -15,10 +15,9 @@ import {
 function Navigation() {
     return (
         <div className="navigation-bar">
-            
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/">Navbar</Navbar.Brand>
-                <Nav className="mr-auto">
+                <Nav className="mr-auto" >
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/write">Write</Nav.Link>
                     <Nav.Link href="#BookReview">Review</Nav.Link>
