@@ -1,5 +1,6 @@
 import './App.css';
 import Write from "./components/Write";
+import Main from "./components/Main";
 
 import {
   BrowserRouter as Router, 
@@ -11,7 +12,8 @@ import {
 function App() {
   return (<Router>
     <Routes>
-    <Route path="/" element={<Write/>}/>
+    <Route path="/" element={<Main/>}/>
+    <Route path="/write" element={<Write/>}/>
   </Routes>
   </Router>
   );
